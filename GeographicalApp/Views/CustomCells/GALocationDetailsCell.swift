@@ -24,6 +24,14 @@ class GALocationDetailsCell : UITableViewCell {
         self.makeAPhoneCall()
     }
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        containerView.layer.borderColor = UIColor.white.cgColor
+        containerView.layer.borderWidth = 1
+        containerView.layer.cornerRadius = 4
+        containerView.dropCardShadow()
+    }
+    
     /**
      Customize Cell With Model displays details for each location data model.
      - Parameter locationDataModel: GALocationViewModel contains DMlocation details.
@@ -36,7 +44,6 @@ class GALocationDetailsCell : UITableViewCell {
         if let location = locationDataModel.location {
             addReginWithAnnotation(location:location)
         }
-        
     }
     
     /**
@@ -46,7 +53,6 @@ class GALocationDetailsCell : UITableViewCell {
     func addReginWithAnnotation(location: CLLocation) {
         let region = MKCoordinateRegionMakeWithDistance(location.coordinate, 100, 100)
         mapView.setRegion(region, animated: true)
-        
         let point = MKPointAnnotation()
         point.coordinate = location.coordinate
         self.mapView.addAnnotation(point)
