@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57EBD467A75E74975DDFD0AA /* Pods_GeographicalAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6426515E856D7E2859813C07 /* Pods_GeographicalAppUITests.framework */; };
+		78FC647910F0873ACADFCD45 /* Pods_GeographicalAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A14659FE7112FC3DE0F0E95C /* Pods_GeographicalAppTests.framework */; };
 		913E861D202DAF7A0091F059 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E861C202DAF7A0091F059 /* AppDelegate.swift */; };
 		913E861F202DAF7A0091F059 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E861E202DAF7A0091F059 /* ViewController.swift */; };
 		913E8622202DAF7A0091F059 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 913E8620202DAF7A0091F059 /* Main.storyboard */; };
@@ -14,6 +16,7 @@
 		913E8627202DAF7A0091F059 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 913E8625202DAF7A0091F059 /* LaunchScreen.storyboard */; };
 		913E8632202DAF7A0091F059 /* GeographicalAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E8631202DAF7A0091F059 /* GeographicalAppTests.swift */; };
 		913E863D202DAF7A0091F059 /* GeographicalAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E863C202DAF7A0091F059 /* GeographicalAppUITests.swift */; };
+		C619BE2CFFCDA255CD6FA013 /* Pods_GeographicalApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6040AAC0B449D39E7C8B3389 /* Pods_GeographicalApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		49F31503C21D3C3C8549C589 /* Pods-GeographicalAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeographicalAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeographicalAppUITests/Pods-GeographicalAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6040AAC0B449D39E7C8B3389 /* Pods_GeographicalApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeographicalApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6426515E856D7E2859813C07 /* Pods_GeographicalAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeographicalAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		67FDE4C6063F9837E76F0432 /* Pods-GeographicalApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeographicalApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeographicalApp/Pods-GeographicalApp.release.xcconfig"; sourceTree = "<group>"; };
 		913E8619202DAF7A0091F059 /* GeographicalApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeographicalApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		913E861C202DAF7A0091F059 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		913E861E202DAF7A0091F059 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +54,11 @@
 		913E8638202DAF7A0091F059 /* GeographicalAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeographicalAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		913E863C202DAF7A0091F059 /* GeographicalAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeographicalAppUITests.swift; sourceTree = "<group>"; };
 		913E863E202DAF7A0091F059 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A14659FE7112FC3DE0F0E95C /* Pods_GeographicalAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeographicalAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA1680CA49C75215C557765D /* Pods-GeographicalApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeographicalApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GeographicalApp/Pods-GeographicalApp.debug.xcconfig"; sourceTree = "<group>"; };
+		B5847DFC0B922A16EAE193C5 /* Pods-GeographicalAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeographicalAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeographicalAppTests/Pods-GeographicalAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		C2622B13357670642DEE55ED /* Pods-GeographicalAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeographicalAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GeographicalAppTests/Pods-GeographicalAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D66AEA2FE5CEAE0C08943909 /* Pods-GeographicalAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeographicalAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GeographicalAppUITests/Pods-GeographicalAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C619BE2CFFCDA255CD6FA013 /* Pods_GeographicalApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78FC647910F0873ACADFCD45 /* Pods_GeographicalAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57EBD467A75E74975DDFD0AA /* Pods_GeographicalAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +96,8 @@
 				913E8630202DAF7A0091F059 /* GeographicalAppTests */,
 				913E863B202DAF7A0091F059 /* GeographicalAppUITests */,
 				913E861A202DAF7A0091F059 /* Products */,
+				E47461CC62C0B30F7BA1D8DF /* Pods */,
+				9F87DFD0E0824BC5482D633F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +142,29 @@
 			path = GeographicalAppUITests;
 			sourceTree = "<group>";
 		};
+		9F87DFD0E0824BC5482D633F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6040AAC0B449D39E7C8B3389 /* Pods_GeographicalApp.framework */,
+				A14659FE7112FC3DE0F0E95C /* Pods_GeographicalAppTests.framework */,
+				6426515E856D7E2859813C07 /* Pods_GeographicalAppUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E47461CC62C0B30F7BA1D8DF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AA1680CA49C75215C557765D /* Pods-GeographicalApp.debug.xcconfig */,
+				67FDE4C6063F9837E76F0432 /* Pods-GeographicalApp.release.xcconfig */,
+				C2622B13357670642DEE55ED /* Pods-GeographicalAppTests.debug.xcconfig */,
+				B5847DFC0B922A16EAE193C5 /* Pods-GeographicalAppTests.release.xcconfig */,
+				D66AEA2FE5CEAE0C08943909 /* Pods-GeographicalAppUITests.debug.xcconfig */,
+				49F31503C21D3C3C8549C589 /* Pods-GeographicalAppUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 913E8641202DAF7A0091F059 /* Build configuration list for PBXNativeTarget "GeographicalApp" */;
 			buildPhases = (
+				9ADA28360CA42D4CEC26DD00 /* [CP] Check Pods Manifest.lock */,
 				913E8615202DAF7A0091F059 /* Sources */,
 				913E8616202DAF7A0091F059 /* Frameworks */,
 				913E8617202DAF7A0091F059 /* Resources */,
+				050F7AE4E319E7E4C360D43D /* [CP] Embed Pods Frameworks */,
+				5A8745C0E251F8E1EE81D44D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 913E8644202DAF7A0091F059 /* Build configuration list for PBXNativeTarget "GeographicalAppTests" */;
 			buildPhases = (
+				889E1294B2DBA21B0183BD7E /* [CP] Check Pods Manifest.lock */,
 				913E8629202DAF7A0091F059 /* Sources */,
 				913E862A202DAF7A0091F059 /* Frameworks */,
 				913E862B202DAF7A0091F059 /* Resources */,
+				61CEE4C19353B01DE3C139FC /* [CP] Embed Pods Frameworks */,
+				A6A8A4CCB13784F2840C99A4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +213,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 913E8647202DAF7A0091F059 /* Build configuration list for PBXNativeTarget "GeographicalAppUITests" */;
 			buildPhases = (
+				F65A304C74A35E997F704755 /* [CP] Check Pods Manifest.lock */,
 				913E8634202DAF7A0091F059 /* Sources */,
 				913E8635202DAF7A0091F059 /* Frameworks */,
 				913E8636202DAF7A0091F059 /* Resources */,
+				221BBB8844ED9EB8435F20D8 /* [CP] Embed Pods Frameworks */,
+				5AB54D24252E27DA9392886F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -253,6 +302,158 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		050F7AE4E319E7E4C360D43D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GeographicalApp/Pods-GeographicalApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GeographicalApp/Pods-GeographicalApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		221BBB8844ED9EB8435F20D8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GeographicalAppUITests/Pods-GeographicalAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A8745C0E251F8E1EE81D44D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GeographicalApp/Pods-GeographicalApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5AB54D24252E27DA9392886F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GeographicalAppUITests/Pods-GeographicalAppUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		61CEE4C19353B01DE3C139FC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GeographicalAppTests/Pods-GeographicalAppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		889E1294B2DBA21B0183BD7E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GeographicalAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9ADA28360CA42D4CEC26DD00 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GeographicalApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A6A8A4CCB13784F2840C99A4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GeographicalAppTests/Pods-GeographicalAppTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F65A304C74A35E997F704755 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GeographicalAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		913E8615202DAF7A0091F059 /* Sources */ = {
@@ -424,6 +625,7 @@
 		};
 		913E8642202DAF7A0091F059 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA1680CA49C75215C557765D /* Pods-GeographicalApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -441,6 +643,7 @@
 		};
 		913E8643202DAF7A0091F059 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67FDE4C6063F9837E76F0432 /* Pods-GeographicalApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -458,6 +661,7 @@
 		};
 		913E8645202DAF7A0091F059 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2622B13357670642DEE55ED /* Pods-GeographicalAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -474,6 +678,7 @@
 		};
 		913E8646202DAF7A0091F059 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5847DFC0B922A16EAE193C5 /* Pods-GeographicalAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -490,6 +695,7 @@
 		};
 		913E8648202DAF7A0091F059 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D66AEA2FE5CEAE0C08943909 /* Pods-GeographicalAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -505,6 +711,7 @@
 		};
 		913E8649202DAF7A0091F059 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49F31503C21D3C3C8549C589 /* Pods-GeographicalAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
