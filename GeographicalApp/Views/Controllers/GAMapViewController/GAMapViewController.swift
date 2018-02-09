@@ -12,20 +12,19 @@ import MapKit
 /**
  *  GA Locations List ViewControllercontroller contains locations details showen on list
  */
-class GAMapViewController: GALocationsDataBaseViewController {
+class GAMapViewController: GALocationsDataBaseViewController, MKMapViewDelegate {
     // MARK: - IBOutlets
     
     @IBOutlet weak var mapView: MKMapView!
     
-    
     // MARK: - UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
+        let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 25.276987, longitude: 55.296249), span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
+        self.mapView.setRegion(region, animated: true)
     }
     
-    
     // MARK: - Methods
-    
     // MARK: - Init
     
     /**
@@ -37,49 +36,50 @@ class GAMapViewController: GALocationsDataBaseViewController {
         return UIStoryboard(name: StoryboardIdentifier.mainStoryboardIdentifier, bundle: Bundle.main).instantiateViewController(withIdentifier: StoryboardIdentifier.mapVCIdentifier) as! GAMapViewController
     }
     
+    
+    override func refreshData(){
+        for loc in locationsList
+        {
+            let point = BuildingAnnotation.init(modelObject: loc)
+            self.mapView.addAnnotation(point)
+        }
+    }
 }
-extension GAMapViewController: MKMapViewDelegate{
-    // MARK: Confirm Mapkit delegate methods
+
+typealias MapViewDelegate = GAMapViewController
+extension MapViewDelegate
+{
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        /*
-         
-         MKAnnotationView *pinView = nil;
-         if(annotation != mapView.userLocation)
-         {
-         pinView = (MKAnnotationView *) [mapView dequeueReusableAnnotationViewWithIdentifier:VEHICLE_PIN_IDEN];
-         if (pinView == nil)
-         pinView = [[MKAnnotationView alloc]
-         initWithAnnotation:annotation reuseIdentifier:VEHICLE_PIN_IDEN];
-         
-         pinView.canShowCallout = YES;
-         pinView.image = [UIImage imageNamed:CAR_ICON];
-         
-         }
-         else {
-         [mapView.userLocation setTitle:USER_LOCATION_TITLE];
-         }
-         return pinView;
-         */
-        return nil
+        
+        var annotationView = self.mapView.dequeueReusableAnnotationView(withIdentifier: "Pin")
+        if annotationView == nil{
+            annotationView = AnnotationView(annotation: annotation, reuseIdentifier: "Pin")
+            annotationView?.canShowCallout = false
+        }else{
+            annotationView?.annotation = annotation
+        }
+        annotationView?.image = #imageLiteral(resourceName: "buildingIcon")
+        return annotationView
     }
     
-    // MARK: Setup map
-    func addingAnnotation() {
-        /*
-         for (MTVehicleViewModel* model in self.vehicleList ){
-         [self addAnnotationForModel: model];
-         }
-         */
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView)
+    {
+        let buildingAnnotation = view.annotation as! BuildingAnnotation
+        let views = Bundle.main.loadNibNamed("CustomCalloutView", owner: nil, options: nil)
+        let calloutView = views?[0] as! CustomCalloutView
+        calloutView.config(buildingAnnotation)
+        calloutView.center = CGPoint(x: view.bounds.size.width / 2, y: -calloutView.bounds.size.height*0.52)
+        view.addSubview(calloutView)
+        mapView.setCenter((view.annotation?.coordinate)!, animated: true)
     }
     
-    func addAnnotationForModel(_ locationDataModel: GALocationViewModel){
-        //        MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
-        //        point.coordinate = model.location.coordinate;
-        //        point.title = @"Taxi";
-        //        point.subtitle = model.heading;
-        //
-        //        [self.mapView addAnnotation:point];
+    func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
+        if view.isKind(of: AnnotationView.self)
+        {
+            for subview in view.subviews
+            {
+                subview.removeFromSuperview()
+            }
+        }
     }
 }
-
-

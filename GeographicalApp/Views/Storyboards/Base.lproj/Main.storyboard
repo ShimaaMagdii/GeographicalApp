@@ -227,7 +227,7 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="jSZ-qV-yZJ">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <connections>
-                                    <outlet property="delegate" destination="Hch-qs-qp6" id="ocG-PR-iGJ"/>
+                                    <outlet property="delegate" destination="Hch-qs-qp6" id="rjK-7W-LTk"/>
                                 </connections>
                             </mapView>
                         </subviews>

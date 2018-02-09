@@ -40,6 +40,19 @@
 		913E868D202DD7A80091F059 /* GALocationDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E868C202DD7A80091F059 /* GALocationDataModel.swift */; };
 		913E868E202DD7A80091F059 /* GALocationDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E868C202DD7A80091F059 /* GALocationDataModel.swift */; };
 		913E868F202DD7A80091F059 /* GALocationDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E868C202DD7A80091F059 /* GALocationDataModel.swift */; };
+		913E8691202E3F6B0091F059 /* CustomCalloutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E8690202E3F6B0091F059 /* CustomCalloutView.swift */; };
+		913E8692202E3F6B0091F059 /* CustomCalloutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E8690202E3F6B0091F059 /* CustomCalloutView.swift */; };
+		913E8693202E3F6B0091F059 /* CustomCalloutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E8690202E3F6B0091F059 /* CustomCalloutView.swift */; };
+		913E8695202E40860091F059 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E8694202E40860091F059 /* Utils.swift */; };
+		913E8696202E40860091F059 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E8694202E40860091F059 /* Utils.swift */; };
+		913E8697202E40860091F059 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E8694202E40860091F059 /* Utils.swift */; };
+		913E8699202E414E0091F059 /* CustomCalloutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 913E8698202E414E0091F059 /* CustomCalloutView.xib */; };
+		913E869A202E414E0091F059 /* CustomCalloutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 913E8698202E414E0091F059 /* CustomCalloutView.xib */; };
+		913E869B202E414E0091F059 /* CustomCalloutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 913E8698202E414E0091F059 /* CustomCalloutView.xib */; };
+		913E86A1202E46B10091F059 /* BuildingAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E86A0202E46B10091F059 /* BuildingAnnotation.swift */; };
+		913E86A2202E46B10091F059 /* BuildingAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E86A0202E46B10091F059 /* BuildingAnnotation.swift */; };
+		913E86A3202E46B10091F059 /* BuildingAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E86A0202E46B10091F059 /* BuildingAnnotation.swift */; };
+		913E86A5202E4B090091F059 /* AnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E86A4202E4B090091F059 /* AnnotationView.swift */; };
 		C619BE2CFFCDA255CD6FA013 /* Pods_GeographicalApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6040AAC0B449D39E7C8B3389 /* Pods_GeographicalApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +111,11 @@
 		913E867F202DD6630091F059 /* Dubai-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dubai-Bold.ttf"; sourceTree = "<group>"; };
 		913E8684202DD6750091F059 /* DMLocations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DMLocations.json; sourceTree = "<group>"; };
 		913E868C202DD7A80091F059 /* GALocationDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GALocationDataModel.swift; sourceTree = "<group>"; };
+		913E8690202E3F6B0091F059 /* CustomCalloutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCalloutView.swift; sourceTree = "<group>"; };
+		913E8694202E40860091F059 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		913E8698202E414E0091F059 /* CustomCalloutView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCalloutView.xib; sourceTree = "<group>"; };
+		913E86A0202E46B10091F059 /* BuildingAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingAnnotation.swift; sourceTree = "<group>"; };
+		913E86A4202E4B090091F059 /* AnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnotationView.swift; sourceTree = "<group>"; };
 		A14659FE7112FC3DE0F0E95C /* Pods_GeographicalAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeographicalAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA1680CA49C75215C557765D /* Pods-GeographicalApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeographicalApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GeographicalApp/Pods-GeographicalApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B5847DFC0B922A16EAE193C5 /* Pods-GeographicalAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeographicalAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeographicalAppTests/Pods-GeographicalAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -227,7 +245,11 @@
 		913E8656202DBE8F0091F059 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				913E86A4202E4B090091F059 /* AnnotationView.swift */,
 				913E8657202DBEA10091F059 /* UIView+CardShadow.swift */,
+				913E8690202E3F6B0091F059 /* CustomCalloutView.swift */,
+				913E8698202E414E0091F059 /* CustomCalloutView.xib */,
+				913E86A0202E46B10091F059 /* BuildingAnnotation.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -290,6 +312,7 @@
 			children = (
 				913E861C202DAF7A0091F059 /* AppDelegate.swift */,
 				913E866A202DC33B0091F059 /* Constants.swift */,
+				913E8694202E40860091F059 /* Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -482,6 +505,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				913E8627202DAF7A0091F059 /* LaunchScreen.storyboard in Resources */,
+				913E8699202E414E0091F059 /* CustomCalloutView.xib in Resources */,
 				913E8624202DAF7A0091F059 /* Assets.xcassets in Resources */,
 				913E8622202DAF7A0091F059 /* Main.storyboard in Resources */,
 				913E8681202DD6630091F059 /* Dubai-Light.ttf in Resources */,
@@ -496,6 +520,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				913E869A202E414E0091F059 /* CustomCalloutView.xib in Resources */,
 				913E8686202DD6750091F059 /* DMLocations.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -504,6 +529,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				913E869B202E414E0091F059 /* CustomCalloutView.xib in Resources */,
 				913E8687202DD6750091F059 /* DMLocations.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -677,12 +703,16 @@
 				913E866E202DC46D0091F059 /* GALocationService.swift in Sources */,
 				913E861D202DAF7A0091F059 /* AppDelegate.swift in Sources */,
 				913E865B202DBFF60091F059 /* GALocationDetailsCell.swift in Sources */,
+				913E86A5202E4B090091F059 /* AnnotationView.swift in Sources */,
 				913E866B202DC33B0091F059 /* Constants.swift in Sources */,
 				913E8663202DC1B40091F059 /* GALocationsListViewController.swift in Sources */,
+				913E86A1202E46B10091F059 /* BuildingAnnotation.swift in Sources */,
+				913E8691202E3F6B0091F059 /* CustomCalloutView.swift in Sources */,
 				913E8665202DC1CC0091F059 /* GABaseController.swift in Sources */,
 				913E8658202DBEA10091F059 /* UIView+CardShadow.swift in Sources */,
 				913E8679202DD3710091F059 /* GALocationsDataBaseViewController.swift in Sources */,
 				913E8668202DC2080091F059 /* GAMasterViewController.swift in Sources */,
+				913E8695202E40860091F059 /* Utils.swift in Sources */,
 				913E8654202DBDCC0091F059 /* GALocationViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -691,8 +721,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				913E8692202E3F6B0091F059 /* CustomCalloutView.swift in Sources */,
 				913E868E202DD7A80091F059 /* GALocationDataModel.swift in Sources */,
+				913E86A2202E46B10091F059 /* BuildingAnnotation.swift in Sources */,
 				913E8632202DAF7A0091F059 /* GeographicalAppTests.swift in Sources */,
+				913E8696202E40860091F059 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -700,8 +733,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				913E8693202E3F6B0091F059 /* CustomCalloutView.swift in Sources */,
 				913E868F202DD7A80091F059 /* GALocationDataModel.swift in Sources */,
+				913E86A3202E46B10091F059 /* BuildingAnnotation.swift in Sources */,
 				913E863D202DAF7A0091F059 /* GeographicalAppUITests.swift in Sources */,
+				913E8697202E40860091F059 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

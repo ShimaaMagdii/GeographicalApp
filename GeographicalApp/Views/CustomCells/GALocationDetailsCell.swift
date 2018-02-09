@@ -21,7 +21,7 @@ class GALocationDetailsCell : UITableViewCell {
     @IBOutlet weak var mapView: MKMapView!
     
     @IBAction func phonePressed(_ sender: UIButton) {
-        self.makeAPhoneCall()
+        Utils.makeAPhoneCall(phoneNumber: modelObject.phone)
     }
     
     override func awakeFromNib() {
@@ -56,13 +56,6 @@ class GALocationDetailsCell : UITableViewCell {
         let point = MKPointAnnotation()
         point.coordinate = location.coordinate
         self.mapView.addAnnotation(point)
-    }
-    
-    func makeAPhoneCall()  {
-        guard let phoneNum = modelObject.phone, let number = URL(string: "tel://" + phoneNum) else { return }
-        UIApplication.shared.open(number)
-//        let url: NSURL = URL(string: "TEL://1234567890")! as NSURL
-//        UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
     }
     
 }
