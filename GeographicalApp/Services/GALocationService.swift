@@ -16,7 +16,7 @@ typealias ViewModelClosure  = ([GALocationViewModel]?) -> Void
 class GALocationService  {
     
     /**
-        Get getLocationsData data from API/ json file.
+     Get getLocationsData data from API/ json file.
      - Parameter success: response success block with ViewModelClosure.
      - Parameter failure: response failure block with Error or string msg
      */
@@ -27,25 +27,28 @@ class GALocationService  {
     
     private func getDMLocationsDataFromFile(success :@escaping ViewModelClosure, failure: @escaping ErrorClosure) {
         if let json = readJsonData() {
-            let locationsData: GALocationsDataListModel? = Mapper<GALocationsDataListModel>().map(JSONObject: json)
+            
+            let locationsData: GALocationsDataListModel? = Mapper<GALocationsDataListModel>().map(JSON: json)
             let locationsList: [GALocationViewModel]? = GAMappingManager.mapLocationsDataToLocationViewModel(locationsData: locationsData)
             success(locationsList)
         }else{
             failure("JSON is invalid")
         }
+        
     }
-    
     private func readJsonData() -> [String : Any]? {
-        var jsonResult: [String:Any]?
+        var jsonResult: [String : Any]?
         do {
             let bundle = Bundle(for: type(of: self))
             if let file = bundle.url(forResource: "DMLocations", withExtension: "json") {
                 let data = try Data(contentsOf: file)
                 let json = try JSONSerialization.jsonObject(with: data, options: [])
                 if let object = json as? [String: Any] {
-                    jsonResult =  object
+                    print(object)
+                    jsonResult = object
                 } else if let object = json as? [Any] {
                     print(object)
+                    jsonResult = ["locationsList" : object]
                 } else {
                     print("JSON is invalid")
                 }

@@ -21,6 +21,7 @@ class GALocationsPresenter {
      */
     func attachView(view: GALocationsViewProtocol){
         delegate = view
+        loadViewData()
     }
     
     func isViewAttached() -> Bool {
@@ -28,7 +29,7 @@ class GALocationsPresenter {
     }
     
     func loadViewData() {
-        
+       getLocationsData ()
     }
     
     

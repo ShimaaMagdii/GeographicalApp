@@ -11,7 +11,9 @@ import ObjectMapper
 // DTO Class to parse content of locations json into.
 class GALocationsDataListModel: GABaseMappable {
     private(set) var locationsList : [GALocationDataModel]?
-   
+    override func mapping(map: Map) {
+        locationsList    <- map[MappingKey.locationsList]
+    }
 }
 
 class GALocationDataModel: GABaseMappable {
@@ -52,6 +54,6 @@ fileprivate struct MappingKey {
     static let phone            : String = "phone"
     static let type             : String = "type"
     static let url              : String = "url"
-    
+    static let locationsList    : String = "locationsList"
 }
 
