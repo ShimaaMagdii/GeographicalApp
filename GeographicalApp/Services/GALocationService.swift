@@ -44,11 +44,9 @@ class GALocationService  {
                 let data = try Data(contentsOf: file)
                 let json = try JSONSerialization.jsonObject(with: data, options: [])
                 if let object = json as? [String: Any] {
-                    print(object)
                     jsonResult = object
                 } else if let object = json as? [Any] {
-                    print(object)
-                    jsonResult = ["locationsList" : object]
+                    jsonResult = ["list" : object]
                 } else {
                     print("JSON is invalid")
                 }

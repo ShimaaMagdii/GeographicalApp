@@ -41,5 +41,12 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Dubai-Bold.ttf</string>
+		<string>Dubai-Light.ttf</string>
+		<string>Dubai-Medium.ttf</string>
+		<string>Dubai-Regular.ttf</string>
+	</array>
 </dict>
 </plist>

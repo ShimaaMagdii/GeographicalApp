@@ -54,6 +54,6 @@ fileprivate struct MappingKey {
     static let phone            : String = "phone"
     static let type             : String = "type"
     static let url              : String = "url"
-    static let locationsList    : String = "locationsList"
+    static let locationsList    : String = "list"
 }
 
