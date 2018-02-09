@@ -10,12 +10,36 @@
 		57EBD467A75E74975DDFD0AA /* Pods_GeographicalAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6426515E856D7E2859813C07 /* Pods_GeographicalAppUITests.framework */; };
 		78FC647910F0873ACADFCD45 /* Pods_GeographicalAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A14659FE7112FC3DE0F0E95C /* Pods_GeographicalAppTests.framework */; };
 		913E861D202DAF7A0091F059 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E861C202DAF7A0091F059 /* AppDelegate.swift */; };
-		913E861F202DAF7A0091F059 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E861E202DAF7A0091F059 /* ViewController.swift */; };
 		913E8622202DAF7A0091F059 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 913E8620202DAF7A0091F059 /* Main.storyboard */; };
 		913E8624202DAF7A0091F059 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 913E8623202DAF7A0091F059 /* Assets.xcassets */; };
 		913E8627202DAF7A0091F059 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 913E8625202DAF7A0091F059 /* LaunchScreen.storyboard */; };
 		913E8632202DAF7A0091F059 /* GeographicalAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E8631202DAF7A0091F059 /* GeographicalAppTests.swift */; };
 		913E863D202DAF7A0091F059 /* GeographicalAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E863C202DAF7A0091F059 /* GeographicalAppUITests.swift */; };
+		913E864E202DBD020091F059 /* GABaseMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E864D202DBD020091F059 /* GABaseMappable.swift */; };
+		913E8652202DBDA00091F059 /* GABaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E8651202DBDA00091F059 /* GABaseViewModel.swift */; };
+		913E8654202DBDCC0091F059 /* GALocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E8653202DBDCC0091F059 /* GALocationViewModel.swift */; };
+		913E8658202DBEA10091F059 /* UIView+CardShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E8657202DBEA10091F059 /* UIView+CardShadow.swift */; };
+		913E865B202DBFF60091F059 /* GALocationDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E865A202DBFF60091F059 /* GALocationDetailsCell.swift */; };
+		913E8660202DC1950091F059 /* GAMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E865F202DC1950091F059 /* GAMapViewController.swift */; };
+		913E8663202DC1B40091F059 /* GALocationsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E8662202DC1B40091F059 /* GALocationsListViewController.swift */; };
+		913E8665202DC1CC0091F059 /* GABaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E8664202DC1CC0091F059 /* GABaseController.swift */; };
+		913E8668202DC2080091F059 /* GAMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E8667202DC2080091F059 /* GAMasterViewController.swift */; };
+		913E866B202DC33B0091F059 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E866A202DC33B0091F059 /* Constants.swift */; };
+		913E866E202DC46D0091F059 /* GALocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E866D202DC46D0091F059 /* GALocationService.swift */; };
+		913E8670202DC4AD0091F059 /* GAMappingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E866F202DC4AD0091F059 /* GAMappingManager.swift */; };
+		913E8675202DC6080091F059 /* GALocationsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E8674202DC6080091F059 /* GALocationsPresenter.swift */; };
+		913E8677202DD0180091F059 /* GALocationsListViewController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E8676202DD0180091F059 /* GALocationsListViewController+UITableView.swift */; };
+		913E8679202DD3710091F059 /* GALocationsDataBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E8678202DD3710091F059 /* GALocationsDataBaseViewController.swift */; };
+		913E8680202DD6630091F059 /* Dubai-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 913E867C202DD6630091F059 /* Dubai-Medium.ttf */; };
+		913E8681202DD6630091F059 /* Dubai-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 913E867D202DD6630091F059 /* Dubai-Light.ttf */; };
+		913E8682202DD6630091F059 /* Dubai-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 913E867E202DD6630091F059 /* Dubai-Regular.ttf */; };
+		913E8683202DD6630091F059 /* Dubai-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 913E867F202DD6630091F059 /* Dubai-Bold.ttf */; };
+		913E8685202DD6750091F059 /* DMLocations.json in Resources */ = {isa = PBXBuildFile; fileRef = 913E8684202DD6750091F059 /* DMLocations.json */; };
+		913E8686202DD6750091F059 /* DMLocations.json in Resources */ = {isa = PBXBuildFile; fileRef = 913E8684202DD6750091F059 /* DMLocations.json */; };
+		913E8687202DD6750091F059 /* DMLocations.json in Resources */ = {isa = PBXBuildFile; fileRef = 913E8684202DD6750091F059 /* DMLocations.json */; };
+		913E868D202DD7A80091F059 /* GALocationDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E868C202DD7A80091F059 /* GALocationDataModel.swift */; };
+		913E868E202DD7A80091F059 /* GALocationDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E868C202DD7A80091F059 /* GALocationDataModel.swift */; };
+		913E868F202DD7A80091F059 /* GALocationDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E868C202DD7A80091F059 /* GALocationDataModel.swift */; };
 		C619BE2CFFCDA255CD6FA013 /* Pods_GeographicalApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6040AAC0B449D39E7C8B3389 /* Pods_GeographicalApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,7 +67,6 @@
 		67FDE4C6063F9837E76F0432 /* Pods-GeographicalApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeographicalApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeographicalApp/Pods-GeographicalApp.release.xcconfig"; sourceTree = "<group>"; };
 		913E8619202DAF7A0091F059 /* GeographicalApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeographicalApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		913E861C202DAF7A0091F059 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		913E861E202DAF7A0091F059 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		913E8621202DAF7A0091F059 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		913E8623202DAF7A0091F059 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		913E8626202DAF7A0091F059 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,6 +77,27 @@
 		913E8638202DAF7A0091F059 /* GeographicalAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeographicalAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		913E863C202DAF7A0091F059 /* GeographicalAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeographicalAppUITests.swift; sourceTree = "<group>"; };
 		913E863E202DAF7A0091F059 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		913E864D202DBD020091F059 /* GABaseMappable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GABaseMappable.swift; sourceTree = "<group>"; };
+		913E8651202DBDA00091F059 /* GABaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GABaseViewModel.swift; sourceTree = "<group>"; };
+		913E8653202DBDCC0091F059 /* GALocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GALocationViewModel.swift; sourceTree = "<group>"; };
+		913E8657202DBEA10091F059 /* UIView+CardShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+CardShadow.swift"; sourceTree = "<group>"; };
+		913E865A202DBFF60091F059 /* GALocationDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GALocationDetailsCell.swift; sourceTree = "<group>"; };
+		913E865F202DC1950091F059 /* GAMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GAMapViewController.swift; sourceTree = "<group>"; };
+		913E8662202DC1B40091F059 /* GALocationsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GALocationsListViewController.swift; sourceTree = "<group>"; };
+		913E8664202DC1CC0091F059 /* GABaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GABaseController.swift; sourceTree = "<group>"; };
+		913E8667202DC2080091F059 /* GAMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GAMasterViewController.swift; sourceTree = "<group>"; };
+		913E866A202DC33B0091F059 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		913E866D202DC46D0091F059 /* GALocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GALocationService.swift; sourceTree = "<group>"; };
+		913E866F202DC4AD0091F059 /* GAMappingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GAMappingManager.swift; sourceTree = "<group>"; };
+		913E8674202DC6080091F059 /* GALocationsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GALocationsPresenter.swift; sourceTree = "<group>"; };
+		913E8676202DD0180091F059 /* GALocationsListViewController+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GALocationsListViewController+UITableView.swift"; sourceTree = "<group>"; };
+		913E8678202DD3710091F059 /* GALocationsDataBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GALocationsDataBaseViewController.swift; sourceTree = "<group>"; };
+		913E867C202DD6630091F059 /* Dubai-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dubai-Medium.ttf"; sourceTree = "<group>"; };
+		913E867D202DD6630091F059 /* Dubai-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dubai-Light.ttf"; sourceTree = "<group>"; };
+		913E867E202DD6630091F059 /* Dubai-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dubai-Regular.ttf"; sourceTree = "<group>"; };
+		913E867F202DD6630091F059 /* Dubai-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dubai-Bold.ttf"; sourceTree = "<group>"; };
+		913E8684202DD6750091F059 /* DMLocations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DMLocations.json; sourceTree = "<group>"; };
+		913E868C202DD7A80091F059 /* GALocationDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GALocationDataModel.swift; sourceTree = "<group>"; };
 		A14659FE7112FC3DE0F0E95C /* Pods_GeographicalAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeographicalAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA1680CA49C75215C557765D /* Pods-GeographicalApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeographicalApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GeographicalApp/Pods-GeographicalApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B5847DFC0B922A16EAE193C5 /* Pods-GeographicalAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeographicalAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeographicalAppTests/Pods-GeographicalAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -114,12 +158,12 @@
 		913E861B202DAF7A0091F059 /* GeographicalApp */ = {
 			isa = PBXGroup;
 			children = (
-				913E861C202DAF7A0091F059 /* AppDelegate.swift */,
-				913E861E202DAF7A0091F059 /* ViewController.swift */,
-				913E8620202DAF7A0091F059 /* Main.storyboard */,
-				913E8623202DAF7A0091F059 /* Assets.xcassets */,
-				913E8625202DAF7A0091F059 /* LaunchScreen.storyboard */,
-				913E8628202DAF7A0091F059 /* Info.plist */,
+				913E864A202DBCCD0091F059 /* Models */,
+				913E8655202DBE720091F059 /* Views */,
+				913E8673202DC5E60091F059 /* Presenters */,
+				913E866C202DC4500091F059 /* Services */,
+				913E8669202DC29F0091F059 /* Utils */,
+				913E8671202DC4E00091F059 /* SupportingFiles */,
 			);
 			path = GeographicalApp;
 			sourceTree = "<group>";
@@ -140,6 +184,162 @@
 				913E863E202DAF7A0091F059 /* Info.plist */,
 			);
 			path = GeographicalAppUITests;
+			sourceTree = "<group>";
+		};
+		913E864A202DBCCD0091F059 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				913E864B202DBCD80091F059 /* DTO */,
+				913E864C202DBCDE0091F059 /* ViewModel */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		913E864B202DBCD80091F059 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				913E864D202DBD020091F059 /* GABaseMappable.swift */,
+				913E868C202DD7A80091F059 /* GALocationDataModel.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		913E864C202DBCDE0091F059 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				913E8651202DBDA00091F059 /* GABaseViewModel.swift */,
+				913E8653202DBDCC0091F059 /* GALocationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		913E8655202DBE720091F059 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				913E8672202DC51A0091F059 /* Storyboards */,
+				913E865C202DC0DB0091F059 /* Controllers */,
+				913E8659202DBEB90091F059 /* CustomCells */,
+				913E8656202DBE8F0091F059 /* CustomViews */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		913E8656202DBE8F0091F059 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				913E8657202DBEA10091F059 /* UIView+CardShadow.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		913E8659202DBEB90091F059 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				913E865A202DBFF60091F059 /* GALocationDetailsCell.swift */,
+			);
+			path = CustomCells;
+			sourceTree = "<group>";
+		};
+		913E865C202DC0DB0091F059 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				913E8666202DC1ED0091F059 /* SwipeView */,
+				913E865D202DC1050091F059 /* GABaseController */,
+				913E8661202DC1990091F059 /* GAMapViewController */,
+				913E865E202DC1660091F059 /* GALocationsListViewController */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		913E865D202DC1050091F059 /* GABaseController */ = {
+			isa = PBXGroup;
+			children = (
+				913E8664202DC1CC0091F059 /* GABaseController.swift */,
+				913E8678202DD3710091F059 /* GALocationsDataBaseViewController.swift */,
+			);
+			path = GABaseController;
+			sourceTree = "<group>";
+		};
+		913E865E202DC1660091F059 /* GALocationsListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				913E8662202DC1B40091F059 /* GALocationsListViewController.swift */,
+				913E8676202DD0180091F059 /* GALocationsListViewController+UITableView.swift */,
+			);
+			path = GALocationsListViewController;
+			sourceTree = "<group>";
+		};
+		913E8661202DC1990091F059 /* GAMapViewController */ = {
+			isa = PBXGroup;
+			children = (
+				913E865F202DC1950091F059 /* GAMapViewController.swift */,
+			);
+			path = GAMapViewController;
+			sourceTree = "<group>";
+		};
+		913E8666202DC1ED0091F059 /* SwipeView */ = {
+			isa = PBXGroup;
+			children = (
+				913E8667202DC2080091F059 /* GAMasterViewController.swift */,
+			);
+			path = SwipeView;
+			sourceTree = "<group>";
+		};
+		913E8669202DC29F0091F059 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				913E861C202DAF7A0091F059 /* AppDelegate.swift */,
+				913E866A202DC33B0091F059 /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		913E866C202DC4500091F059 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				913E866D202DC46D0091F059 /* GALocationService.swift */,
+				913E866F202DC4AD0091F059 /* GAMappingManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		913E8671202DC4E00091F059 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				913E8684202DD6750091F059 /* DMLocations.json */,
+				913E867B202DD63E0091F059 /* Fonts */,
+				913E8625202DAF7A0091F059 /* LaunchScreen.storyboard */,
+				913E8623202DAF7A0091F059 /* Assets.xcassets */,
+				913E8628202DAF7A0091F059 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		913E8672202DC51A0091F059 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				913E8620202DAF7A0091F059 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		913E8673202DC5E60091F059 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				913E8674202DC6080091F059 /* GALocationsPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		913E867B202DD63E0091F059 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				913E867F202DD6630091F059 /* Dubai-Bold.ttf */,
+				913E867D202DD6630091F059 /* Dubai-Light.ttf */,
+				913E867C202DD6630091F059 /* Dubai-Medium.ttf */,
+				913E867E202DD6630091F059 /* Dubai-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		9F87DFD0E0824BC5482D633F /* Frameworks */ = {
@@ -284,6 +484,11 @@
 				913E8627202DAF7A0091F059 /* LaunchScreen.storyboard in Resources */,
 				913E8624202DAF7A0091F059 /* Assets.xcassets in Resources */,
 				913E8622202DAF7A0091F059 /* Main.storyboard in Resources */,
+				913E8681202DD6630091F059 /* Dubai-Light.ttf in Resources */,
+				913E8680202DD6630091F059 /* Dubai-Medium.ttf in Resources */,
+				913E8683202DD6630091F059 /* Dubai-Bold.ttf in Resources */,
+				913E8685202DD6750091F059 /* DMLocations.json in Resources */,
+				913E8682202DD6630091F059 /* Dubai-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +496,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				913E8686202DD6750091F059 /* DMLocations.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +504,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				913E8687202DD6750091F059 /* DMLocations.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,8 +667,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				913E861F202DAF7A0091F059 /* ViewController.swift in Sources */,
+				913E864E202DBD020091F059 /* GABaseMappable.swift in Sources */,
+				913E8660202DC1950091F059 /* GAMapViewController.swift in Sources */,
+				913E8652202DBDA00091F059 /* GABaseViewModel.swift in Sources */,
+				913E8675202DC6080091F059 /* GALocationsPresenter.swift in Sources */,
+				913E8670202DC4AD0091F059 /* GAMappingManager.swift in Sources */,
+				913E8677202DD0180091F059 /* GALocationsListViewController+UITableView.swift in Sources */,
+				913E868D202DD7A80091F059 /* GALocationDataModel.swift in Sources */,
+				913E866E202DC46D0091F059 /* GALocationService.swift in Sources */,
 				913E861D202DAF7A0091F059 /* AppDelegate.swift in Sources */,
+				913E865B202DBFF60091F059 /* GALocationDetailsCell.swift in Sources */,
+				913E866B202DC33B0091F059 /* Constants.swift in Sources */,
+				913E8663202DC1B40091F059 /* GALocationsListViewController.swift in Sources */,
+				913E8665202DC1CC0091F059 /* GABaseController.swift in Sources */,
+				913E8658202DBEA10091F059 /* UIView+CardShadow.swift in Sources */,
+				913E8679202DD3710091F059 /* GALocationsDataBaseViewController.swift in Sources */,
+				913E8668202DC2080091F059 /* GAMasterViewController.swift in Sources */,
+				913E8654202DBDCC0091F059 /* GALocationViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +691,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				913E868E202DD7A80091F059 /* GALocationDataModel.swift in Sources */,
 				913E8632202DAF7A0091F059 /* GeographicalAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -477,6 +700,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				913E868F202DD7A80091F059 /* GALocationDataModel.swift in Sources */,
 				913E863D202DAF7A0091F059 /* GeographicalAppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -631,7 +855,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SK6WUB3TZG;
-				INFOPLIST_FILE = GeographicalApp/Info.plist;
+				INFOPLIST_FILE = GeographicalApp/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dm.gov.ae.GeographicalApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -649,7 +873,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SK6WUB3TZG;
-				INFOPLIST_FILE = GeographicalApp/Info.plist;
+				INFOPLIST_FILE = GeographicalApp/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dm.gov.ae.GeographicalApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
