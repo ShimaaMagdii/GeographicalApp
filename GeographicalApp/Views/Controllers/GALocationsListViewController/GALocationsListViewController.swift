@@ -6,7 +6,6 @@
 //  Copyright © 2018 Shimaa Magdi. All rights reserved.
 //
 
-import Foundation
 import UIKit
 /**
  *  GA Locations List ViewControllercontroller contains locations details showen on list
@@ -29,7 +28,6 @@ class GALocationsListViewController: GALocationsDataBaseViewController {
      - returns: GALocationsListViewController Object
      */
     public static func create() -> GALocationsListViewController {
-        
         return UIStoryboard(name: StoryboardIdentifier.mainStoryboardIdentifier, bundle: Bundle.main).instantiateViewController(withIdentifier: StoryboardIdentifier.locationsListVCIdentifier)as! GALocationsListViewController
     }
     

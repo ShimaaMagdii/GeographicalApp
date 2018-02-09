@@ -38,6 +38,7 @@ class GAMapViewController: GALocationsDataBaseViewController, MKMapViewDelegate 
     
     
     override func refreshData(){
+
         for loc in locationsList
         {
             let point = BuildingAnnotation.init(modelObject: loc)
