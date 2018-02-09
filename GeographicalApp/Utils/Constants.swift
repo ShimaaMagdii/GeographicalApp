@@ -11,7 +11,7 @@ import UIKit
 
 
 struct UITableViewConstants {
-    static let estimatedRowHeight           :CGFloat = 110.0
+    static let estimatedRowHeight           :CGFloat = 200.0
 }
 
 struct UITableViewCellIdentifier {

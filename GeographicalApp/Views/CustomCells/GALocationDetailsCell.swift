@@ -12,21 +12,27 @@ import MapKit
  *  GALocationDetailsCell table view cell displays the locatioon details.
  */
 class GALocationDetailsCell : UITableViewCell {
-    
+   private var modelObject: GALocationViewModel!
     // MARK: - Outlets
     @IBOutlet weak var containerView: UIView!
-    @IBOutlet weak var statusLineView: UIView!
-    @IBOutlet weak var typeLabel: UILabel!
-    @IBOutlet weak var headingTitleLabel: UILabel!
-    @IBOutlet weak var headingValueLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var mapView: MKMapView!
     
+    @IBAction func phonePressed(_ sender: UIButton) {
+        self.makeAPhoneCall()
+    }
     
     /**
      Customize Cell With Model displays details for each location data model.
      - Parameter locationDataModel: GALocationViewModel contains DMlocation details.
      */
     func customizeCellWithModel(_ locationDataModel: GALocationViewModel) {
+        modelObject = locationDataModel
+        nameLabel.text = locationDataModel.name
+        addressLabel.text = (locationDataModel.city ?? "") + ", " + (locationDataModel.country ?? "")
+        phoneLabel.text = locationDataModel.phone
         if let location = locationDataModel.location {
             addReginWithAnnotation(location:location)
         }
@@ -46,6 +52,12 @@ class GALocationDetailsCell : UITableViewCell {
         self.mapView.addAnnotation(point)
     }
     
+    func makeAPhoneCall()  {
+        guard let phoneNum = modelObject.phone, let number = URL(string: "tel://" + phoneNum) else { return }
+        UIApplication.shared.open(number)
+//        let url: NSURL = URL(string: "TEL://1234567890")! as NSURL
+//        UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
+    }
     
 }
 
