@@ -920,6 +920,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SK6WUB3TZG;
 				INFOPLIST_FILE = GeographicalApp/SupportingFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dm.gov.ae.GeographicalApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -938,6 +939,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SK6WUB3TZG;
 				INFOPLIST_FILE = GeographicalApp/SupportingFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dm.gov.ae.GeographicalApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";

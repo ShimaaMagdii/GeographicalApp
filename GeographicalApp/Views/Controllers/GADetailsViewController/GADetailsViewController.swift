@@ -17,9 +17,6 @@ class GADetailsViewController: GABaseController, MFMailComposeViewControllerDele
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var typeLabel: UILabel!
-    @IBOutlet weak var phoneView: UIView!
-    @IBOutlet weak var mailView: UIView!
-    @IBOutlet weak var websiteView: UIView!
     @IBOutlet weak var mapView: MKMapView!
     
     
@@ -61,9 +58,6 @@ class GADetailsViewController: GABaseController, MFMailComposeViewControllerDele
      */
     func setUpView() {
         mapView.dropCardShadow()
-        mailView.dropCardShadow()
-        phoneView.dropCardShadow()
-        websiteView.dropCardShadow()
         nameLabel.text = modelObject.name
         addressLabel.text = modelObject.address
         typeLabel.text = modelObject.type
