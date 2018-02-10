@@ -25,4 +25,10 @@ struct StoryboardIdentifier {
     static let detailsVCIdentifier          :String = "GADetailsViewController"
     
 }
+extension UIColor {
+    static func selectedColor() -> UIColor {
+        return UIColor(red: 101, green: 84, blue: 118, alpha: 1)
+    }
+    
+}
 
