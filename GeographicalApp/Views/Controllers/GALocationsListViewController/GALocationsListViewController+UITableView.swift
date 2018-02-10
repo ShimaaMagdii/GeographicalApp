@@ -24,6 +24,11 @@ extension GALocationsListViewController: UITableViewDelegate, UITableViewDataSou
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: GALocationDetailsCell!  = tableView.dequeueReusableCell(withIdentifier: UITableViewCellIdentifier.locDetailCellIdentifier) as! GALocationDetailsCell
         cell.customizeCellWithModel(locationsList[indexPath.row])
+        if currentLanguage == SupportedLanguages.English.rawValue {
+            cell.contentView.semanticContentAttribute = .forceLeftToRight
+        }else{
+            cell.contentView.semanticContentAttribute = .forceRightToLeft
+        }
         return cell
     }
     

@@ -8,13 +8,22 @@
 
 import UIKit
 import MBProgressHUD
+import CZPicker
+
 /**
  *  Base View Controller which contains common function for all viewControllers on the app.
  */
 class GABaseController: UIViewController {
+    let pickerData = ["English", "العربية"]
+    var currentLanguage :String = AppDelegate.currentLanguage
     override func viewDidLoad() {
         super.viewDidLoad()
-       // setRightNavButton()
+        //        navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "mapIcon"), style: .plain, target: self, action: #selector(showLangPicker))
+        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        addSettingBtnItemOnView()
     }
     
     // MARK: - Util
@@ -39,40 +48,6 @@ class GABaseController: UIViewController {
     func handleError(error: Error) {
         showMessage(message: error.localizedDescription)
     }
-    
-    func setRightNavButton () {
-        if let navigationBar = self.navigationController?.navigationBar {
-            let firstFrame = CGRect(x: 50, y: 0, width: navigationBar.frame.width/2, height: navigationBar.frame.height)
-            let secondFrame = CGRect(x: 100, y: 0, width: navigationBar.frame.width/2, height: navigationBar.frame.height)
-
-            
-            let switchControl = UISwitch(frame: firstFrame)
-            switchControl.isOn = true
-            switchControl.onTintColor = UIColor.brown
-            switchControl.setOn(true, animated: false)
-            switchControl.addTarget(self, action: #selector(switchValueDidChange(sender:)), for: .valueChanged)
-            
-            let secondLabel = UILabel(frame: secondFrame)
-            secondLabel.text = "Arabic"
-            
-            navigationBar.addSubview(switchControl)
-            navigationBar.addSubview(secondLabel)
-        
-        
-        
-        //self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(customView: switchControl)
-        
-    }
-    }
-    
-    @objc func switchValueDidChange(sender:UISwitch!)
-    {
-        if sender.isOn {
-            print("on")
-        } else{
-            print("off")
-        }
-    }
     /**
      Display alert with Message
      - Parameter: NSString for Message
@@ -83,4 +58,95 @@ class GABaseController: UIViewController {
         present(alertController, animated: true, completion: nil)
     }
     
+    
+    
+    func addSettingBtnItemOnView ()
+    {
+        
+        // hide default navigation bar button item
+        self.navigationItem.rightBarButtonItem = nil;
+        
+        let button = UIButton(type: .custom) // let preferred over var here
+        button.frame = CGRect(x: 1, y: 1, width: 30, height: 30)
+        button.backgroundColor = UIColor.clear
+        button.setImage(#imageLiteral(resourceName: "settingIcon"), for: .normal)
+        button.addTarget(self, action: #selector(showLangPicker), for: UIControlEvents.touchUpInside)
+        let rightButton: UIBarButtonItem = UIBarButtonItem(customView: button)
+        
+        self.navigationItem.setRightBarButton(rightButton, animated: false)
+    }
+    
+  
+    @objc func showLangPicker (){
+        
+        if let picker = CZPickerView(headerTitle: "Choose Language", cancelButtonTitle: "Cancel", confirmButtonTitle: "Confirm"){
+            picker.delegate = self
+            picker.dataSource = self
+            picker.confirmButtonBackgroundColor = UIColor.black
+            picker.headerBackgroundColor = UIColor.black
+            picker.needFooterView = true
+            var index = 0
+            if(currentLanguage == SupportedLanguages.Arabic.rawValue){
+                index = 1
+            }
+            picker.setSelectedRows([index])
+            picker.show()
+        }
+        
+    }
+    
+    func changeCurrentLang(newLanguage: SupportedLanguages.RawValue){
+        if (currentLanguage != newLanguage){
+            currentLanguage = newLanguage
+            if currentLanguage == SupportedLanguages.English.rawValue {
+                UIView.appearance().semanticContentAttribute = .forceLeftToRight
+            }else{
+                UIView.appearance().semanticContentAttribute = .forceRightToLeft
+            }
+            setCurrentLang()
+        }
+    }
+    
+    func setCurrentLang () {
+        Bundle.setLanguage(language: currentLanguage)
+        UserDefaults.standard.set([currentLanguage], forKey: UserDefaultsKeys.appleLanguages)
+        UserDefaults.standard.set(currentLanguage, forKey: UserDefaultsKeys.currentLang)
+        UserDefaults.standard.synchronize()
+        reloadViewFromNib()
+    }
+    
+    
+    
+}
+extension GABaseController: CZPickerViewDelegate, CZPickerViewDataSource {
+    func numberOfRows(in pickerView: CZPickerView!) -> Int {
+        return pickerData.count
+    }
+    
+    func czpickerView(_ pickerView: CZPickerView!, imageForRow row: Int) -> UIImage! {
+        return nil
+    }
+    
+    
+    func czpickerView(_ pickerView: CZPickerView!, titleForRow row: Int) -> String! {
+        return pickerData[row]
+    }
+    
+    func czpickerView(_ pickerView: CZPickerView!, didConfirmWithItemAtRow row: Int){
+        print(pickerData[row])
+        
+        if (row == 1){
+            changeCurrentLang(newLanguage: SupportedLanguages.Arabic.rawValue)
+        }else{
+             changeCurrentLang(newLanguage: SupportedLanguages.English.rawValue)
+        }
+        
+    }
+    
+    func czpickerViewDidClickCancelButton(_ pickerView: CZPickerView!) {
+        //self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    private func czpickerView(pickerView: CZPickerView!, didConfirmWithItemsAtRows rows: [AnyObject]!) {
+    }
 }

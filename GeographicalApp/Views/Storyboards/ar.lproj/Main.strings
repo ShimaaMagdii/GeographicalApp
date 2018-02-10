@@ -1,0 +1,24 @@
+
+/* Class = "UISegmentedControl"; 5a5-pm-R46.segmentTitles[0] = "List"; ObjectID = "5a5-pm-R46"; */
+"5a5-pm-R46.segmentTitles[0]" = "قائمة";
+
+/* Class = "UISegmentedControl"; 5a5-pm-R46.segmentTitles[1] = "Map"; ObjectID = "5a5-pm-R46"; */
+"5a5-pm-R46.segmentTitles[1]" = "خريطة";
+
+/* Class = "UILabel"; text = "800900"; ObjectID = "9O8-BA-oyN"; */
+"9O8-BA-oyN.text" = "800900";
+
+/* Class = "UILabel"; text = "Dubai, United Arab Emirates"; ObjectID = "BKZ-mT-IyH"; */
+"BKZ-mT-IyH.text" = "دبي، الامارات العربية المتحدة";
+
+/* Class = "UILabel"; text = "Dubai Municipality Main buidling"; ObjectID = "JWQ-9y-Qg9"; */
+"JWQ-9y-Qg9.text" = "دبي المبنى الاساسي";
+
+/* Class = "UILabel"; text = "Dubai, United Arab Emirates"; ObjectID = "eUX-Xk-6xO"; */
+"eUX-Xk-6xO.text" = "دبي، الامارات العربية المتحدة";
+
+/* Class = "UILabel"; text = "Dubai Municipality Main buidling"; ObjectID = "oVS-K7-SHM"; */
+"oVS-K7-SHM.text" = "دبي المبنى الاساسي";
+
+/* Class = "UILabel"; text = "Services"; ObjectID = "sOh-E9-ap1"; */
+"sOh-E9-ap1.text" = "خدمات";

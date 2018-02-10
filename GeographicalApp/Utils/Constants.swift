@@ -25,6 +25,17 @@ struct StoryboardIdentifier {
     static let detailsVCIdentifier          :String = "GADetailsViewController"
     
 }
+
+struct UserDefaultsKeys {
+    static let currentLang = "currentLang"
+    static let appleLanguages = "AppleLanguages"
+    
+}
+
+enum SupportedLanguages: String {
+    case English = "en", Arabic = "ar"
+}
+
 extension UIColor {
     static func selectedColor() -> UIColor {
         return UIColor(red: 101, green: 84, blue: 118, alpha: 1)

@@ -53,6 +53,8 @@
 		913E86A5202E4B090091F059 /* AnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E86A4202E4B090091F059 /* AnnotationView.swift */; };
 		913E86A9202E57AA0091F059 /* GADetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E86A8202E57AA0091F059 /* GADetailsViewController.swift */; };
 		913E86AC202E691C0091F059 /* GAWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E86AB202E691C0091F059 /* GAWebViewController.swift */; };
+		91B0DEFD202F57CB0030E82E /* NSBundle+Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B0DEFB202F57CB0030E82E /* NSBundle+Language.swift */; };
+		91B0DEFE202F57CB0030E82E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B0DEFC202F57CB0030E82E /* Extensions.swift */; };
 		C619BE2CFFCDA255CD6FA013 /* Pods_GeographicalApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6040AAC0B449D39E7C8B3389 /* Pods_GeographicalApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -118,6 +120,10 @@
 		913E86A4202E4B090091F059 /* AnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnotationView.swift; sourceTree = "<group>"; };
 		913E86A8202E57AA0091F059 /* GADetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GADetailsViewController.swift; sourceTree = "<group>"; };
 		913E86AB202E691C0091F059 /* GAWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GAWebViewController.swift; sourceTree = "<group>"; };
+		91B0DEFB202F57CB0030E82E /* NSBundle+Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSBundle+Language.swift"; sourceTree = "<group>"; };
+		91B0DEFC202F57CB0030E82E /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		91B0DEFF202F755E0030E82E /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
+		91B0DF00202F755E0030E82E /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		A14659FE7112FC3DE0F0E95C /* Pods_GeographicalAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeographicalAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA1680CA49C75215C557765D /* Pods-GeographicalApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeographicalApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GeographicalApp/Pods-GeographicalApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B5847DFC0B922A16EAE193C5 /* Pods-GeographicalAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeographicalAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeographicalAppTests/Pods-GeographicalAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -178,6 +184,7 @@
 		913E861B202DAF7A0091F059 /* GeographicalApp */ = {
 			isa = PBXGroup;
 			children = (
+				91B0DEFA202F57BB0030E82E /* Localization */,
 				913E864A202DBCCD0091F059 /* Models */,
 				913E8655202DBE720091F059 /* Views */,
 				913E8673202DC5E60091F059 /* Presenters */,
@@ -393,6 +400,15 @@
 			path = GAWebViewController;
 			sourceTree = "<group>";
 		};
+		91B0DEFA202F57BB0030E82E /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				91B0DEFC202F57CB0030E82E /* Extensions.swift */,
+				91B0DEFB202F57CB0030E82E /* NSBundle+Language.swift */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
 		9F87DFD0E0824BC5482D633F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -572,11 +588,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-GeographicalApp/Pods-GeographicalApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CZPicker/CZPicker.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CZPicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 			);
@@ -741,6 +759,8 @@
 				913E8658202DBEA10091F059 /* UIView+CardShadow.swift in Sources */,
 				913E86A9202E57AA0091F059 /* GADetailsViewController.swift in Sources */,
 				913E8679202DD3710091F059 /* GALocationsDataBaseViewController.swift in Sources */,
+				91B0DEFE202F57CB0030E82E /* Extensions.swift in Sources */,
+				91B0DEFD202F57CB0030E82E /* NSBundle+Language.swift in Sources */,
 				913E8668202DC2080091F059 /* GAMasterViewController.swift in Sources */,
 				913E8695202E40860091F059 /* Utils.swift in Sources */,
 				913E8654202DBDCC0091F059 /* GALocationViewModel.swift in Sources */,
@@ -789,6 +809,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				913E8621202DAF7A0091F059 /* Base */,
+				91B0DEFF202F755E0030E82E /* ar */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -797,6 +818,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				913E8626202DAF7A0091F059 /* Base */,
+				91B0DF00202F755E0030E82E /* ar */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -808,6 +830,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -865,6 +888,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

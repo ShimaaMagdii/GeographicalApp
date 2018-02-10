@@ -6,6 +6,7 @@ target 'GeographicalApp' do
 
         pod 'ObjectMapper'
         pod 'MBProgressHUD'
+        pod 'CZPicker'
 
   target 'GeographicalAppTests' do
     inherit! :search_paths
