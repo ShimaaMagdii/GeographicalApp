@@ -20,7 +20,7 @@ class BuildingAnnotation: NSObject, MKAnnotation {
     init(modelObject: GALocationViewModel) {
         coordinate = (modelObject.location?.coordinate)!
         name       = modelObject.name
-        address    = modelObject.country
+        address    = modelObject.address
         phone      = modelObject.phone
     }
 }

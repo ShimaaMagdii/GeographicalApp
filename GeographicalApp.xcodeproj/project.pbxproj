@@ -52,6 +52,7 @@
 		913E86A3202E46B10091F059 /* BuildingAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E86A0202E46B10091F059 /* BuildingAnnotation.swift */; };
 		913E86A5202E4B090091F059 /* AnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E86A4202E4B090091F059 /* AnnotationView.swift */; };
 		913E86A9202E57AA0091F059 /* GADetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E86A8202E57AA0091F059 /* GADetailsViewController.swift */; };
+		913E86AC202E691C0091F059 /* GAWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E86AB202E691C0091F059 /* GAWebViewController.swift */; };
 		C619BE2CFFCDA255CD6FA013 /* Pods_GeographicalApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6040AAC0B449D39E7C8B3389 /* Pods_GeographicalApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -116,6 +117,7 @@
 		913E86A0202E46B10091F059 /* BuildingAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingAnnotation.swift; sourceTree = "<group>"; };
 		913E86A4202E4B090091F059 /* AnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnotationView.swift; sourceTree = "<group>"; };
 		913E86A8202E57AA0091F059 /* GADetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GADetailsViewController.swift; sourceTree = "<group>"; };
+		913E86AB202E691C0091F059 /* GAWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GAWebViewController.swift; sourceTree = "<group>"; };
 		A14659FE7112FC3DE0F0E95C /* Pods_GeographicalAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeographicalAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA1680CA49C75215C557765D /* Pods-GeographicalApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeographicalApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GeographicalApp/Pods-GeographicalApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B5847DFC0B922A16EAE193C5 /* Pods-GeographicalAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeographicalAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeographicalAppTests/Pods-GeographicalAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -262,6 +264,7 @@
 		913E865C202DC0DB0091F059 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				913E86AA202E68F70091F059 /* GAWebViewController */,
 				913E8666202DC1ED0091F059 /* SwipeView */,
 				913E865D202DC1050091F059 /* GABaseController */,
 				913E8661202DC1990091F059 /* GAMapViewController */,
@@ -380,6 +383,14 @@
 				913E86A8202E57AA0091F059 /* GADetailsViewController.swift */,
 			);
 			path = GADetailsViewController;
+			sourceTree = "<group>";
+		};
+		913E86AA202E68F70091F059 /* GAWebViewController */ = {
+			isa = PBXGroup;
+			children = (
+				913E86AB202E691C0091F059 /* GAWebViewController.swift */,
+			);
+			path = GAWebViewController;
 			sourceTree = "<group>";
 		};
 		9F87DFD0E0824BC5482D633F /* Frameworks */ = {
@@ -710,6 +721,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				913E86AC202E691C0091F059 /* GAWebViewController.swift in Sources */,
 				913E864E202DBD020091F059 /* GABaseMappable.swift in Sources */,
 				913E8660202DC1950091F059 /* GAMapViewController.swift in Sources */,
 				913E8652202DBDA00091F059 /* GABaseViewModel.swift in Sources */,

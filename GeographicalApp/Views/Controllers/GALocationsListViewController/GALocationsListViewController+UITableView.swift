@@ -37,10 +37,8 @@ extension GALocationsListViewController: UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-       // showMessage(message: locationsList[indexPath.row])
+        let detailsVC: GADetailsViewController = GADetailsViewController.create()
+        detailsVC.modelObject = locationsList[indexPath.row]
+        self.navigationController?.pushViewController(detailsVC, animated: true)
     }
-    
-    
 }
-

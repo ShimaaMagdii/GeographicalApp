@@ -17,20 +17,18 @@ class GALocationViewModel: GABaseViewModel {
     var phone      :String?
     var email      :String?
     var type       :String?
-    var city       :String?
-    var country    :String?
+    var address       :String?
     var location   :CLLocation?
     var url        :String?
    
     // MARK: - Init
-    required public init(name: String!, phone: String?, email: String?, type: String?, city: String?, country: String?, location: CLLocation?, url: String?) {
+    required public init(name: String!, phone: String?, email: String?, type: String?, address: String?, location: CLLocation?, url: String?) {
         
         self.name       = name
         self.phone      = phone
         self.email      = email
         self.type       = type
-        self.city       = city
-        self.country    = country
+        self.address    = address
         self.location   = location
         self.url        = url
     }

@@ -39,7 +39,7 @@ class GALocationDetailsCell : UITableViewCell {
     func customizeCellWithModel(_ locationDataModel: GALocationViewModel) {
         modelObject = locationDataModel
         nameLabel.text = locationDataModel.name
-        addressLabel.text = (locationDataModel.city ?? "") + ", " + (locationDataModel.country ?? "")
+        addressLabel.text = locationDataModel.address
         phoneLabel.text = locationDataModel.phone
         if let location = locationDataModel.location {
             addReginWithAnnotation(location:location)

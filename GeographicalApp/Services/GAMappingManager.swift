@@ -26,7 +26,8 @@ class GAMappingManager {
                 if let long = locationObj.longitude, let lat = locationObj.latitude {
                     locationCoordinate = CLLocation(latitude: Double(lat)!, longitude:Double(long)!)
                 }
-                let locationViewModel = GALocationViewModel(name: locationObj.name ?? "", phone: locationObj.phone, email: locationObj.email, type: locationObj.type, city: locationObj.city, country: locationObj.country, location: locationCoordinate, url: locationObj.url)
+                let address = (locationObj.city ?? "") + ", " + (locationObj.country ?? "")
+                let locationViewModel = GALocationViewModel(name: locationObj.name ?? "", phone: locationObj.phone, email: locationObj.email, type: locationObj.type, address: address, location: locationCoordinate, url: locationObj.url)
                 locationsList.append(locationViewModel)
             }
         }

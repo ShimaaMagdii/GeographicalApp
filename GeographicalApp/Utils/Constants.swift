@@ -22,5 +22,7 @@ struct StoryboardIdentifier {
     static let mainStoryboardIdentifier     :String = "Main"
     static let locationsListVCIdentifier    :String = "GALocationsListViewController"
     static let mapVCIdentifier              :String = "GAMapViewController"
+    static let detailsVCIdentifier          :String = "GADetailsViewController"
+    
 }
 
