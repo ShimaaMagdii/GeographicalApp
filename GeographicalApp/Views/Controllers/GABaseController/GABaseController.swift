@@ -62,24 +62,15 @@ class GABaseController: UIViewController {
     
     func addSettingBtnItemOnView ()
     {
-        
-        // hide default navigation bar button item
-        self.navigationItem.rightBarButtonItem = nil;
-        
-        let button = UIButton(type: .custom) // let preferred over var here
-        button.frame = CGRect(x: 1, y: 1, width: 30, height: 30)
-        button.backgroundColor = UIColor.clear
-        button.setImage(#imageLiteral(resourceName: "settingIcon"), for: .normal)
-        button.addTarget(self, action: #selector(showLangPicker), for: UIControlEvents.touchUpInside)
-        let rightButton: UIBarButtonItem = UIBarButtonItem(customView: button)
-        
-        self.navigationItem.setRightBarButton(rightButton, animated: false)
+        let settingBtn  = UIBarButtonItem(image: #imageLiteral(resourceName: "settingIcon"), style: .plain, target: self, action: #selector(showLangPicker))
+        self.navigationController?.navigationBar.tintColor = UIColor.black
+        self.navigationItem.rightBarButtonItem  = settingBtn
     }
     
   
     @objc func showLangPicker (){
         
-        if let picker = CZPickerView(headerTitle: "Choose Language", cancelButtonTitle: "Cancel", confirmButtonTitle: "Confirm"){
+        if let picker = CZPickerView(headerTitle: "ChooseLanguage".localized, cancelButtonTitle: "Cancel".localized, confirmButtonTitle: "Confirm".localized){
             picker.delegate = self
             picker.dataSource = self
             picker.confirmButtonBackgroundColor = UIColor.black

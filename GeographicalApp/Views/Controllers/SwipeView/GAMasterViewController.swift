@@ -60,6 +60,7 @@ final class GAMasterViewController: GABaseController {
         viewController.view.frame = containerView.bounds
         viewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         viewController.didMove(toParentViewController: self)
+        viewController.reloadViewFromNib()
     }
     
     private func remove(asChildViewController viewController: UIViewController) {

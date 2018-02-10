@@ -55,6 +55,7 @@
 		913E86AC202E691C0091F059 /* GAWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E86AB202E691C0091F059 /* GAWebViewController.swift */; };
 		91B0DEFD202F57CB0030E82E /* NSBundle+Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B0DEFB202F57CB0030E82E /* NSBundle+Language.swift */; };
 		91B0DEFE202F57CB0030E82E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B0DEFC202F57CB0030E82E /* Extensions.swift */; };
+		91B0DF0C202F9C0A0030E82E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 91B0DF0E202F9C0A0030E82E /* Localizable.strings */; };
 		C619BE2CFFCDA255CD6FA013 /* Pods_GeographicalApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6040AAC0B449D39E7C8B3389 /* Pods_GeographicalApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -124,6 +125,8 @@
 		91B0DEFC202F57CB0030E82E /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		91B0DEFF202F755E0030E82E /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
 		91B0DF00202F755E0030E82E /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		91B0DF0F202F9C0F0030E82E /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		91B0DF10202F9C100030E82E /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A14659FE7112FC3DE0F0E95C /* Pods_GeographicalAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeographicalAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA1680CA49C75215C557765D /* Pods-GeographicalApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeographicalApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GeographicalApp/Pods-GeographicalApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B5847DFC0B922A16EAE193C5 /* Pods-GeographicalAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeographicalAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeographicalAppTests/Pods-GeographicalAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -191,6 +194,7 @@
 				913E866C202DC4500091F059 /* Services */,
 				913E8669202DC29F0091F059 /* Utils */,
 				913E8671202DC4E00091F059 /* SupportingFiles */,
+				91B0DF0E202F9C0A0030E82E /* Localizable.strings */,
 			);
 			path = GeographicalApp;
 			sourceTree = "<group>";
@@ -530,6 +534,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = 913E8610202DAF7A0091F059;
 			productRefGroup = 913E861A202DAF7A0091F059 /* Products */;
@@ -553,6 +558,7 @@
 				913E8624202DAF7A0091F059 /* Assets.xcassets in Resources */,
 				913E8622202DAF7A0091F059 /* Main.storyboard in Resources */,
 				913E8681202DD6630091F059 /* Dubai-Light.ttf in Resources */,
+				91B0DF0C202F9C0A0030E82E /* Localizable.strings in Resources */,
 				913E8680202DD6630091F059 /* Dubai-Medium.ttf in Resources */,
 				913E8683202DD6630091F059 /* Dubai-Bold.ttf in Resources */,
 				913E8685202DD6750091F059 /* DMLocations.json in Resources */,
@@ -821,6 +827,15 @@
 				91B0DF00202F755E0030E82E /* ar */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		91B0DF0E202F9C0A0030E82E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				91B0DF0F202F9C0F0030E82E /* Base */,
+				91B0DF10202F9C100030E82E /* ar */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
