@@ -11,3 +11,7 @@
 "Cancel" = "Cancel";
 "Map" = "Map";
 "List"= "List";
+"emailBody" = "<p>You're so awesome!</p>";
+"emailError" = "We couldn't send your email now";
+"invalidJson" = "JSON is invalid";
+"noFile" = "no file";

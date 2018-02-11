@@ -82,11 +82,11 @@ class GADetailsViewController: GABaseController, MFMailComposeViewControllerDele
         if MFMailComposeViewController.canSendMail() {
             let mail = MFMailComposeViewController()
             mail.mailComposeDelegate = self
-            mail.setToRecipients(["shimaa.magdi@yahoo.com"])
-            mail.setMessageBody("<p>You're so awesome!</p>", isHTML: true)
+            mail.setToRecipients([])
+            mail.setMessageBody("emailBody".localized, isHTML: true)
             present(mail, animated: true)
         } else {
-            showMessage(message: "We couldn't send your email now")
+            showMessage(message: "emailError".localized)
         }
     }
 }

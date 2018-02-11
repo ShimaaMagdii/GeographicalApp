@@ -1,30 +1,10 @@
 //
 //  LocalizationExtensions.swift
-//  Licenses
+//
 //
 //  Created by Shimaa Magdi on 2/5/18.
 //  Copyright © 2018 platformCodes. All rights reserved.
 //
-
-/*
- TO add localization to your app:-
- 1- Install "Localize_Swift" pod and add your supported language from project settings. "pod 'Localize-Swift', '~> 2.0'"
- 
- 2- Add this handling in your change language function:-
- A- UIView.appearance().semanticContentAttribute = .forceRightToLeft// forceLeftToRight
- B- Localize.setCurrentLanguage(currentLanguage)
- C- reloadViewFromNib() // if your view dosn't inherit from baseController
- 
- 3- Add this observer "LCLLanguageChangeNotification" on your view controller which you want to reload it. like (baseController) // Or reintit all the stack of your navigation list.
- 
- NotificationCenter.default.addObserver(self, selector: #selector(reloadUI), name: NSNotification.Name(LCLLanguageChangeNotification), object: nil)
- 
- @objc func reloadUI() -> Void
- {
- reloadViewFromNib()
- }
- */
-
 
 import UIKit
 
@@ -80,12 +60,3 @@ extension UIViewController {
         parent?.addSubview(view) // This line causes the view to be reloaded
     }
 }
-//extension UINavigationController {
-//    func reloadList(){
-//        for (let controller in self.viewControllers) {
-//            controller.reloadViewFromNib()
-//        }
-//
-//    }
-//}
-

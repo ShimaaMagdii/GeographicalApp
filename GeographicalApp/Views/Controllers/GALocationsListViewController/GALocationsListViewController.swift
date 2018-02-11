@@ -13,7 +13,7 @@ import UIKit
 class GALocationsListViewController: GALocationsDataBaseViewController {
     // MARK: - IBOutlets
     @IBOutlet private weak var locationsTableView: UITableView!
-    
+    let estimatedRowHeight = 200.0
     // MARK: - UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()

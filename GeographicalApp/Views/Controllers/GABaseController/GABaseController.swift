@@ -18,9 +18,8 @@ class GABaseController: UIViewController {
     var currentLanguage :String = AppDelegate.currentLanguage
     override func viewDidLoad() {
         super.viewDidLoad()
-        //        navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "mapIcon"), style: .plain, target: self, action: #selector(showLangPicker))
-        
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         addSettingBtnItemOnView()
@@ -58,8 +57,6 @@ class GABaseController: UIViewController {
         present(alertController, animated: true, completion: nil)
     }
     
-    
-    
     func addSettingBtnItemOnView ()
     {
         let settingBtn  = UIBarButtonItem(image: #imageLiteral(resourceName: "settingIcon"), style: .plain, target: self, action: #selector(showLangPicker))
@@ -67,7 +64,7 @@ class GABaseController: UIViewController {
         self.navigationItem.rightBarButtonItem  = settingBtn
     }
     
-  
+    
     @objc func showLangPicker (){
         
         if let picker = CZPickerView(headerTitle: "ChooseLanguage".localized, cancelButtonTitle: "Cancel".localized, confirmButtonTitle: "Confirm".localized){
@@ -107,7 +104,6 @@ class GABaseController: UIViewController {
     }
     
     
-    
 }
 extension GABaseController: CZPickerViewDelegate, CZPickerViewDataSource {
     func numberOfRows(in pickerView: CZPickerView!) -> Int {
@@ -129,13 +125,11 @@ extension GABaseController: CZPickerViewDelegate, CZPickerViewDataSource {
         if (row == 1){
             changeCurrentLang(newLanguage: SupportedLanguages.Arabic.rawValue)
         }else{
-             changeCurrentLang(newLanguage: SupportedLanguages.English.rawValue)
+            changeCurrentLang(newLanguage: SupportedLanguages.English.rawValue)
         }
-        
     }
     
     func czpickerViewDidClickCancelButton(_ pickerView: CZPickerView!) {
-        //self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     private func czpickerView(pickerView: CZPickerView!, didConfirmWithItemsAtRows rows: [AnyObject]!) {

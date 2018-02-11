@@ -187,12 +187,12 @@
 		913E861B202DAF7A0091F059 /* GeographicalApp */ = {
 			isa = PBXGroup;
 			children = (
-				91B0DEFA202F57BB0030E82E /* Localization */,
 				913E864A202DBCCD0091F059 /* Models */,
 				913E8655202DBE720091F059 /* Views */,
 				913E8673202DC5E60091F059 /* Presenters */,
 				913E866C202DC4500091F059 /* Services */,
 				913E8669202DC29F0091F059 /* Utils */,
+				91B0DEFA202F57BB0030E82E /* Localization */,
 				913E8671202DC4E00091F059 /* SupportingFiles */,
 				91B0DF0E202F9C0A0030E82E /* Localizable.strings */,
 			);

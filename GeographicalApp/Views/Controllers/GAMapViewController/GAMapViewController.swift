@@ -16,7 +16,7 @@ class GAMapViewController: GALocationsDataBaseViewController, MKMapViewDelegate 
     // MARK: - IBOutlets
     
     @IBOutlet weak var mapView: MKMapView!
-    
+    let annotationNibName = "CustomCalloutView"
     // MARK: - UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +38,7 @@ class GAMapViewController: GALocationsDataBaseViewController, MKMapViewDelegate 
     
     
     override func refreshData(){
-
+        
         for loc in locationsList
         {
             let point = BuildingAnnotation.init(modelObject: loc)
@@ -52,9 +52,9 @@ extension MapViewDelegate
 {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         
-        var annotationView = self.mapView.dequeueReusableAnnotationView(withIdentifier: "Pin")
+        var annotationView = self.mapView.dequeueReusableAnnotationView(withIdentifier: StoryboardIdentifier.mapPin)
         if annotationView == nil{
-            annotationView = AnnotationView(annotation: annotation, reuseIdentifier: "Pin")
+            annotationView = AnnotationView(annotation: annotation, reuseIdentifier: StoryboardIdentifier.mapPin)
             annotationView?.canShowCallout = false
         }else{
             annotationView?.annotation = annotation
@@ -66,7 +66,7 @@ extension MapViewDelegate
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView)
     {
         let buildingAnnotation = view.annotation as! BuildingAnnotation
-        let views = Bundle.main.loadNibNamed("CustomCalloutView", owner: nil, options: nil)
+        let views = Bundle.main.loadNibNamed(annotationNibName, owner: nil, options: nil)
         let calloutView = views?[0] as! CustomCalloutView
         calloutView.config(buildingAnnotation)
         calloutView.center = CGPoint(x: view.bounds.size.width / 2, y: -calloutView.bounds.size.height*0.52)

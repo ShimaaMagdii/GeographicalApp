@@ -9,7 +9,7 @@
 import UIKit
 
 /**
- *  GA Details View Controller contains locations details.
+ *  GA Web View Controller opens location url.
  */
 class GAWebViewController: GABaseController {
     var urlStr: String?

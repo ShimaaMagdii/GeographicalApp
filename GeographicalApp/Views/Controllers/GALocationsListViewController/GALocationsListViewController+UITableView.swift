@@ -22,7 +22,7 @@ extension GALocationsListViewController: UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: GALocationDetailsCell!  = tableView.dequeueReusableCell(withIdentifier: UITableViewCellIdentifier.locDetailCellIdentifier) as! GALocationDetailsCell
+        let cell: GALocationDetailsCell!  = tableView.dequeueReusableCell(withIdentifier: StoryboardIdentifier.locDetailCellIdentifier) as! GALocationDetailsCell
         cell.customizeCellWithModel(locationsList[indexPath.row])
         if currentLanguage == SupportedLanguages.English.rawValue {
             cell.contentView.semanticContentAttribute = .forceLeftToRight
@@ -34,7 +34,7 @@ extension GALocationsListViewController: UITableViewDelegate, UITableViewDataSou
     
     // MARK: - UITableViewDelegate Methods
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableViewConstants.estimatedRowHeight
+        return CGFloat(estimatedRowHeight)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

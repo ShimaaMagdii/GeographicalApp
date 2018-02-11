@@ -14,7 +14,7 @@ typealias ErrorClosure      = (Any) -> Void
 typealias ViewModelClosure  = ([GALocationViewModel]?) -> Void
 
 class GALocationService  {
-    
+    let fileName = "DMLocations"
     /**
      Get getLocationsData data from API/ json file.
      - Parameter success: response success block with ViewModelClosure.
@@ -26,21 +26,21 @@ class GALocationService  {
     }
     
     private func getDMLocationsDataFromFile(success :@escaping ViewModelClosure, failure: @escaping ErrorClosure) {
-        if let json = readJsonData() {
+        if let json = readJsonData(fileName: fileName) {
             
             let locationsData: GALocationsDataListModel? = Mapper<GALocationsDataListModel>().map(JSON: json)
             let locationsList: [GALocationViewModel]? = GAMappingManager.mapLocationsDataToLocationViewModel(locationsData: locationsData)
             success(locationsList)
         }else{
-            failure("JSON is invalid")
+            failure("invalidJson".localized)
         }
         
     }
-    private func readJsonData() -> [String : Any]? {
+    private func readJsonData(fileName: String) -> [String : Any]? {
         var jsonResult: [String : Any]?
         do {
             let bundle = Bundle(for: type(of: self))
-            if let file = bundle.url(forResource: "DMLocations", withExtension: "json") {
+            if let file = bundle.url(forResource:fileName , withExtension: "json") {
                 let data = try Data(contentsOf: file)
                 let json = try JSONSerialization.jsonObject(with: data, options: [])
                 if let object = json as? [String: Any] {
@@ -48,10 +48,10 @@ class GALocationService  {
                 } else if let object = json as? [Any] {
                     jsonResult = ["list" : object]
                 } else {
-                    print("JSON is invalid")
+                    print("invalidJson".localized)
                 }
             } else {
-                print("no file")
+                print("noFile".localized)
             }
         } catch {
             print(error.localizedDescription)
