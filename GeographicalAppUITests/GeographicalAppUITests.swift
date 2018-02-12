@@ -8,29 +8,104 @@
 
 import XCTest
 
+import XCTest
+
 class GeographicalAppUITests: XCTestCase {
-        
+    var app: XCUIApplication!
     override func setUp() {
         super.setUp()
-        
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-        
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        XCUIApplication().launch()
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        app = XCUIApplication()
+        app.launch()
     }
     
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+        app = nil
         super.tearDown()
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testViewSwitch() {
+        //given
+        let listButton = app.segmentedControls.buttons["List".localized]
+        let mapButton = app.segmentedControls.buttons["Map".localized]
+        let tableView = app.tables.element
+        
+        // then
+        if listButton.isSelected {
+            XCTAssertTrue(tableView.exists)
+            
+            mapButton.tap()
+            XCTAssertFalse(tableView.exists)
+        } else if mapButton.isSelected {
+            XCTAssertFalse(tableView.exists)
+            
+            listButton.tap()
+            XCTAssertTrue(tableView.exists)
+        }
+    }
+    
+    func testTableViewShowedCorrectly() {
+        let listButton = app.segmentedControls.buttons["List".localized]
+        let mapButton = app.segmentedControls.buttons["Map".localized]
+        let tableView = app.tables.element
+        
+        if listButton.isSelected {
+            XCTAssertTrue(tableView.exists)
+            
+            mapButton.tap()
+            XCTAssertFalse(tableView.exists)
+            
+            listButton.tap()
+            XCTAssertTrue(tableView.exists)
+            
+        } else if mapButton.isSelected {
+            XCTAssertFalse(tableView.exists)
+            
+            listButton.tap()
+            XCTAssertTrue(tableView.exists)
+        }
+    }
+    
+    
+    func testUITableView() {
+        let table = app.tables.element(boundBy: 0)
+        let lastCell = table.cells.element(boundBy: 9)
+        table.scrollToElement(element: lastCell)
+        XCTAssertFalse(table.cells.count == 0)
+    }
+    
+    func testShowPopUpForTableCell() {
+        //given
+        let listButton = app.segmentedControls.buttons["List".localized]
+        let mapButton = app.segmentedControls.buttons["Map".localized]
+        let tableView = app.tables.element
+        
+        // then
+        if listButton.isSelected {
+            XCTAssertTrue(tableView.exists)
+        } else if mapButton.isSelected {
+            listButton.tap()
+            XCTAssertTrue(tableView.exists)
+        }
+        
+        let cell = tableView.cells.element(boundBy: 2)
+        XCTAssertTrue(cell.exists)
+        let indexedText = cell.staticTexts.element
+        XCTAssertTrue(indexedText.exists)
+        cell.tap()
     }
     
 }
+
+extension XCUIElement {
+    func scrollToElement(element: XCUIElement) {
+        for _ in 0..<10 {
+            swipeUp()
+        }
+    }
+}
+
+
+

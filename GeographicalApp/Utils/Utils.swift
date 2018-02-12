@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Utils {
+class Utils: NSObject {
   
     static func makeAPhoneCall(phoneNumber: String?)  {
         guard let phoneNum = phoneNumber, let number = URL(string: "tel://" + phoneNum) else { return }
@@ -16,7 +16,6 @@ class Utils {
             UIApplication.shared.open(number)
         }
     }
-    
     
     
 }

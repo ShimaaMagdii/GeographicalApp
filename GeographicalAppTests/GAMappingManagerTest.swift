@@ -1,40 +1,46 @@
 //
-//  GALocationService.swift
-//  GeographicalApp
+//  GAMappingManagerTest.swift
+//  GeographicalAppTests
 //
-//  Created by Shimaa Magdi on 2/9/18.
+//  Created by Shimaa Magdi on 2/12/18.
 //  Copyright © 2018 Shimaa Magdi. All rights reserved.
 //
 
-
-import Foundation
+import XCTest
 import ObjectMapper
 
-typealias ErrorClosure      = (Any) -> Void
-typealias ViewModelClosure  = ([GALocationViewModel]?) -> Void
+@testable import GeographicalApp
 
-class GALocationService  {
-    let fileName = "DMLocations"
-    /**
-     Get getLocationsData data from API/ json file.
-     - Parameter success: response success block with ViewModelClosure.
-     - Parameter failure: response failure block with Error or string msg
-     */
+class GAMappingManagerTest: XCTestCase {
     
-    func getLocationsData(success :@escaping ViewModelClosure, failure: @escaping ErrorClosure) {
-        getDMLocationsDataFromFile(success: success, failure: failure)
+    override func setUp() {
+        super.setUp()
     }
     
-    private func getDMLocationsDataFromFile(success :@escaping ViewModelClosure, failure: @escaping ErrorClosure) {
-        if let json = readJsonData(fileName: fileName) {
-            
+    override func tearDown() {
+        super.tearDown()
+    }
+    
+    func testMapVehicleListToVehicleViewModel() {
+        if let json = readJsonData(fileName: "DMLocations") {
             let locationsData: GALocationsDataListModel? = Mapper<GALocationsDataListModel>().map(JSON: json)
+            XCTAssertNotNil(locationsData)
+            XCTAssertEqual(locationsData?.locationsList?.count, 10)
             let locationsList: [GALocationViewModel]? = GAMappingManager.mapLocationsDataToLocationViewModel(locationsData: locationsData)
-            success(locationsList)
-        }else{
-            failure("invalidJson".localized)
+            
+            let firstModel = locationsList?.first
+            let lastModel = locationsList?.last
+            
+            XCTAssertNotNil(locationsList)
+            XCTAssertEqual(locationsList?.count, 10)
+            
+            XCTAssertEqual(firstModel?.name, "Dubai Municipality Main buidling")
+            XCTAssertEqual(lastModel!.name, "Al Manara Center Dubai Municipality")
+            
         }
+        
     }
+    
     private func readJsonData(fileName: String) -> [String : Any]? {
         var jsonResult: [String : Any]?
         do {
