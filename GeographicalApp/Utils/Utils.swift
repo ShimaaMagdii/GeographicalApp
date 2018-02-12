@@ -12,7 +12,9 @@ class Utils {
   
     static func makeAPhoneCall(phoneNumber: String?)  {
         guard let phoneNum = phoneNumber, let number = URL(string: "tel://" + phoneNum) else { return }
-        UIApplication.shared.open(number)
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(number)
+        }
     }
     
     

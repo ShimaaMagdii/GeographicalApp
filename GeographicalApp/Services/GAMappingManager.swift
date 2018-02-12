@@ -22,12 +22,9 @@ class GAMappingManager {
         var locationsList = [GALocationViewModel]()
         if let locations = locationsData?.locationsList {
             for locationObj in locations {
-                var locationCoordinate: CLLocation?
-                if let long = locationObj.longitude, let lat = locationObj.latitude {
-                    locationCoordinate = CLLocation(latitude: Double(lat)!, longitude:Double(long)!)
-                }
+                let locationCoordinate = CLLocationCoordinate2DMake(Double(locationObj.latitude!)!, Double(locationObj.longitude!)!)
                 let address = (locationObj.city ?? "") + ", " + (locationObj.country ?? "")
-                let locationViewModel = GALocationViewModel(name: locationObj.name ?? "", phone: locationObj.phone, email: locationObj.email, type: locationObj.type, address: address, location: locationCoordinate, url: locationObj.url)
+                let locationViewModel = GALocationViewModel(name: locationObj.name ?? "", phone: locationObj.phone, email: locationObj.email, type: locationObj.type, address: address, coordinate: locationCoordinate, url: locationObj.url)
                 locationsList.append(locationViewModel)
             }
         }

@@ -15,3 +15,8 @@
 "emailError" = "We couldn't send your email now";
 "invalidJson" = "JSON is invalid";
 "noFile" = "no file";
+"Ok" = "Ok";
+"Error" = "Error";
+"DoseNotSupportGeofencing" ="Geofencing is not supported on this device!";
+"Warning" = "Warning";
+"WarningForLocationPermission" ="Your geotification is saved but will only be activated once you grant Geotify permission to access the device location.";

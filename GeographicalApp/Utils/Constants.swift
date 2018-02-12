@@ -23,6 +23,7 @@ struct StoryboardIdentifier {
 struct UserDefaultsKeys {
     static let currentLang = "currentLang"
     static let appleLanguages = "AppleLanguages"
+    static let savedItems = "savedItems"
     
 }
 

@@ -14,6 +14,7 @@ import MessageUI
  */
 class GADetailsViewController: GABaseController, MFMailComposeViewControllerDelegate {
     var modelObject: GALocationViewModel!
+    var email = "shimaa.magdi@yahoo.com"
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var typeLabel: UILabel!
@@ -52,6 +53,7 @@ class GADetailsViewController: GABaseController, MFMailComposeViewControllerDele
             webVC.urlStr = modelObject.url
         }
     }
+    
     /**
      Customize Cell With Model displays details for each location data model.
      - Parameter locationDataModel: GALocationViewModel contains DMlocation details.
@@ -61,20 +63,18 @@ class GADetailsViewController: GABaseController, MFMailComposeViewControllerDele
         nameLabel.text = modelObject.name
         addressLabel.text = modelObject.address
         typeLabel.text = modelObject.type
-        if let location = modelObject.location {
-            addReginWithAnnotation(location:location)
-        }
+        addReginWithAnnotation(coordinate: modelObject.coordinate)
     }
     
     /**
      Adding annotation displays DM location on cell map.
      - Parameter location: CLLocation for the DM location.
      */
-    func addReginWithAnnotation(location: CLLocation) {
-        let region = MKCoordinateRegionMakeWithDistance(location.coordinate, 100, 100)
+    func addReginWithAnnotation(coordinate: CLLocationCoordinate2D) {
+        let region = MKCoordinateRegionMakeWithDistance(coordinate, 100, 100)
         mapView.setRegion(region, animated: true)
         let point = MKPointAnnotation()
-        point.coordinate = location.coordinate
+        point.coordinate = coordinate
         self.mapView.addAnnotation(point)
     }
     
@@ -82,7 +82,7 @@ class GADetailsViewController: GABaseController, MFMailComposeViewControllerDele
         if MFMailComposeViewController.canSendMail() {
             let mail = MFMailComposeViewController()
             mail.mailComposeDelegate = self
-            mail.setToRecipients([])
+            mail.setToRecipients([email])
             mail.setMessageBody("emailBody".localized, isHTML: true)
             present(mail, animated: true)
         } else {

@@ -47,9 +47,6 @@
 		913E8699202E414E0091F059 /* CustomCalloutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 913E8698202E414E0091F059 /* CustomCalloutView.xib */; };
 		913E869A202E414E0091F059 /* CustomCalloutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 913E8698202E414E0091F059 /* CustomCalloutView.xib */; };
 		913E869B202E414E0091F059 /* CustomCalloutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 913E8698202E414E0091F059 /* CustomCalloutView.xib */; };
-		913E86A1202E46B10091F059 /* BuildingAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E86A0202E46B10091F059 /* BuildingAnnotation.swift */; };
-		913E86A2202E46B10091F059 /* BuildingAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E86A0202E46B10091F059 /* BuildingAnnotation.swift */; };
-		913E86A3202E46B10091F059 /* BuildingAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E86A0202E46B10091F059 /* BuildingAnnotation.swift */; };
 		913E86A5202E4B090091F059 /* AnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E86A4202E4B090091F059 /* AnnotationView.swift */; };
 		913E86A9202E57AA0091F059 /* GADetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E86A8202E57AA0091F059 /* GADetailsViewController.swift */; };
 		913E86AC202E691C0091F059 /* GAWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E86AB202E691C0091F059 /* GAWebViewController.swift */; };
@@ -117,7 +114,6 @@
 		913E8690202E3F6B0091F059 /* CustomCalloutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCalloutView.swift; sourceTree = "<group>"; };
 		913E8694202E40860091F059 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		913E8698202E414E0091F059 /* CustomCalloutView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCalloutView.xib; sourceTree = "<group>"; };
-		913E86A0202E46B10091F059 /* BuildingAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingAnnotation.swift; sourceTree = "<group>"; };
 		913E86A4202E4B090091F059 /* AnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnotationView.swift; sourceTree = "<group>"; };
 		913E86A8202E57AA0091F059 /* GADetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GADetailsViewController.swift; sourceTree = "<group>"; };
 		913E86AB202E691C0091F059 /* GAWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GAWebViewController.swift; sourceTree = "<group>"; };
@@ -380,7 +376,6 @@
 		913E86A6202E54330091F059 /* CustomsAnnotations */ = {
 			isa = PBXGroup;
 			children = (
-				913E86A0202E46B10091F059 /* BuildingAnnotation.swift */,
 				913E8698202E414E0091F059 /* CustomCalloutView.xib */,
 				913E8690202E3F6B0091F059 /* CustomCalloutView.swift */,
 				913E86A4202E4B090091F059 /* AnnotationView.swift */,
@@ -759,7 +754,6 @@
 				913E86A5202E4B090091F059 /* AnnotationView.swift in Sources */,
 				913E866B202DC33B0091F059 /* Constants.swift in Sources */,
 				913E8663202DC1B40091F059 /* GALocationsListViewController.swift in Sources */,
-				913E86A1202E46B10091F059 /* BuildingAnnotation.swift in Sources */,
 				913E8691202E3F6B0091F059 /* CustomCalloutView.swift in Sources */,
 				913E8665202DC1CC0091F059 /* GABaseController.swift in Sources */,
 				913E8658202DBEA10091F059 /* UIView+CardShadow.swift in Sources */,
@@ -778,7 +772,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				913E868E202DD7A80091F059 /* GALocationDataModel.swift in Sources */,
-				913E86A2202E46B10091F059 /* BuildingAnnotation.swift in Sources */,
 				913E8632202DAF7A0091F059 /* GeographicalAppTests.swift in Sources */,
 				913E8696202E40860091F059 /* Utils.swift in Sources */,
 			);
@@ -789,7 +782,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				913E868F202DD7A80091F059 /* GALocationDataModel.swift in Sources */,
-				913E86A3202E46B10091F059 /* BuildingAnnotation.swift in Sources */,
 				913E863D202DAF7A0091F059 /* GeographicalAppUITests.swift in Sources */,
 				913E8697202E40860091F059 /* Utils.swift in Sources */,
 			);
@@ -959,7 +951,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SK6WUB3TZG;
 				INFOPLIST_FILE = GeographicalApp/SupportingFiles/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dm.gov.ae.GeographicalApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -978,7 +970,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SK6WUB3TZG;
 				INFOPLIST_FILE = GeographicalApp/SupportingFiles/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dm.gov.ae.GeographicalApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";

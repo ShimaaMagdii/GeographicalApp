@@ -52,9 +52,7 @@ class GABaseController: UIViewController {
      - Parameter: NSString for Message
      */
     func showMessage(message: String) {
-        let alertController = UIAlertController.init(title: nil, message: message, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction.init(title: "OK", style: .cancel, handler: nil))
-        present(alertController, animated: true, completion: nil)
+        showAlert(withTitle: nil, message: message)
     }
     
     func addSettingBtnItemOnView ()
@@ -133,5 +131,14 @@ extension GABaseController: CZPickerViewDelegate, CZPickerViewDataSource {
     }
     
     private func czpickerView(pickerView: CZPickerView!, didConfirmWithItemsAtRows rows: [AnyObject]!) {
+    }
+}
+// MARK: Helper Extensions
+extension UIViewController {
+    func showAlert(withTitle title: String?, message: String?) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ok".localized, style: .cancel, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
     }
 }

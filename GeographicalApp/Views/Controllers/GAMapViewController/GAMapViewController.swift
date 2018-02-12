@@ -41,8 +41,7 @@ class GAMapViewController: GALocationsDataBaseViewController, MKMapViewDelegate 
         
         for loc in locationsList
         {
-            let point = BuildingAnnotation.init(modelObject: loc)
-            self.mapView.addAnnotation(point)
+            self.mapView.addAnnotation(loc)
         }
     }
 }
@@ -65,7 +64,7 @@ extension MapViewDelegate
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView)
     {
-        let buildingAnnotation = view.annotation as! BuildingAnnotation
+        let buildingAnnotation = view.annotation as! GALocationViewModel
         let views = Bundle.main.loadNibNamed(annotationNibName, owner: nil, options: nil)
         let calloutView = views?[0] as! CustomCalloutView
         calloutView.config(buildingAnnotation)

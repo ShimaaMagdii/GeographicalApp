@@ -12,7 +12,7 @@ import MapKit
  *  GALocationDetailsCell table view cell displays the locatioon details.
  */
 class GALocationDetailsCell : UITableViewCell {
-   private var modelObject: GALocationViewModel!
+    private var modelObject: GALocationViewModel!
     // MARK: - Outlets
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -41,20 +41,18 @@ class GALocationDetailsCell : UITableViewCell {
         nameLabel.text = locationDataModel.name
         addressLabel.text = locationDataModel.address
         phoneLabel.text = locationDataModel.phone
-        if let location = locationDataModel.location {
-            addReginWithAnnotation(location:location)
-        }
+        addReginWithAnnotation(location: locationDataModel.coordinate)
     }
     
     /**
      Adding annotation displays DM location on cell map.
      - Parameter location: CLLocation for the DM location.
      */
-    func addReginWithAnnotation(location: CLLocation) {
-        let region = MKCoordinateRegionMakeWithDistance(location.coordinate, 100, 100)
+    func addReginWithAnnotation(location: CLLocationCoordinate2D) {
+        let region = MKCoordinateRegionMakeWithDistance(location, 100, 100)
         mapView.setRegion(region, animated: true)
         let point = MKPointAnnotation()
-        point.coordinate = location.coordinate
+        point.coordinate = location
         self.mapView.addAnnotation(point)
     }
     

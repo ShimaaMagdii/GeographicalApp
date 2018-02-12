@@ -9,7 +9,7 @@
 import UIKit
 
 class CustomCalloutView: UIView {
-    private var modelObject: BuildingAnnotation! {
+    private var modelObject: GALocationViewModel! {
         didSet{
             nameLabel.text = modelObject.name
             addressLabel.text = modelObject.address
@@ -35,7 +35,7 @@ class CustomCalloutView: UIView {
     }
     
     
-    func config(_ modelObject: BuildingAnnotation ){
+    func config(_ modelObject: GALocationViewModel ){
         self.modelObject = modelObject
     }
     
