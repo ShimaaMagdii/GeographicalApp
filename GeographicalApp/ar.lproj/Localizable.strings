@@ -15,3 +15,8 @@
 "invalidJson" = "الداتا غير صحيحة";
 "noFile" = "لم نستطيع العثور على الملف";
 "Ok" = "تم";
+"Error" = "خطأ";
+"DoseNotSupportGeofencing" = "خدمة ارسال تنبيه للمكان غير متوفرة";
+"Warning" = "تحذير";
+"WarningForLocationPermission" = "يلزم وجود خدمات تحديد المواقع";
+"WelcomeMsg" = "مرحبا بك في ";

@@ -20,3 +20,4 @@
 "DoseNotSupportGeofencing" ="Geofencing is not supported on this device!";
 "Warning" = "Warning";
 "WarningForLocationPermission" ="Your geotification is saved but will only be activated once you grant Geotify permission to access the device location.";
+"WelcomeMsg" = "Welcome to";
